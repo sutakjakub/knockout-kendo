@@ -2,7 +2,16 @@ createBinding({
     name: "kendoTimePicker",
     defaultOption: VALUE,
     events: {
-        change: VALUE
+        change: VALUE,
+        open:
+        {
+            writeTo: ISOPEN,
+            value: true
+        },
+        close: {
+            writeTo: ISOPEN,
+            value: false
+        }
     },
     watch: {
         max: MAX,
